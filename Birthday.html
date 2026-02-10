@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Birthday Surprise ❤️</title>
+
+<style>
+body {
+    margin: 0;
+    font-family: 'Comic Sans MS', cursive;
+    background: #fdf2f8;
+    overflow: hidden;
+}
+
+.layer {
+    display: none;
+    height: 100vh;
+    width: 100vw;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    padding: 20px;
+}
+
+.active {
+    display: flex;
+}
+
+/* ---------- Layer 1 ---------- */
+.layer1 {
+    background: linear-gradient(#fff0f6, #ffe4ec);
+}
+
+.title {
+    font-size: 40px;
+    color: #ff4d6d;
+}
+
+.subtitle {
+    font-size: 22px;
+    margin: 15px 0;
+    color: #c9184a;
+}
+
+.btn {
+    padding: 12px 25px;
+    font-size: 18px;
+    border: none;
+    border-radius: 25px;
+    background: #ff4d6d;
+    color: white;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+.heart {
+    font-size: 60px;
+    animation: bounce 1.5s infinite;
+}
+
+@keyframes bounce {
+    0%,100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+/* ---------- Funny Layer ---------- */
+.funny-container {
+    display: flex;
+    gap: 25px;
+    margin-top: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.funny-card {
+    width: 200px;
+    text-align: center;
+    animation: wiggle 2s infinite;
+}
+
+.funny-card img {
+    width: 180px;
+    height: 180px;
+    border-radius: 20px;
+    object-fit: cover;
+}
+
+.funny-text {
+    margin-top: 10px;
+    font-size: 18px;
+    color: #ff006e;
+}
+
+@keyframes wiggle {
+    0%,100% { transform: rotate(0deg); }
+    25% { transform: rotate(2deg); }
+    75% { transform: rotate(-2deg); }
+}
+
+/* ---------- Layer 3 : MESSAGES ---------- */
+.message-box {
+    font-size: 28px;
+    color: #9d0208;
+    max-width: 650px;
+    line-height: 1.6;
+    animation: fade 1.5s ease-in-out;
+}
+
+@keyframes fade {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* ---------- Layer 4 ---------- */
+.reasons li {
+    font-size: 22px;
+    color: #6a040f;
+    margin: 10px 0;
+}
+
+/* ---------- Layer 5 ---------- */
+.final {
+    font-size: 45px;
+    color: #ff006e;
+    animation: zoom 2s infinite;
+}
+
+@keyframes zoom {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+}
+
+/* ---------- Love Letter Style ---------- */
+.letter-container {
+    background: #f8ecd4;
+    border: 2px solid #c8a97e;
+    padding: 35px;
+    max-width: 650px;
+    font-size: 12px;
+    line-height: 1.7;
+    color: #5a3e2b;
+    font-family: 'Georgia', serif;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    border-radius: 8px;
+    animation: fade 2s ease-in-out;
+}
+
+.letter-title {
+    font-size: 26px;
+    margin-bottom: 20px;
+    font-style: italic;
+}
+
+.signature {
+    margin-top: 25px;
+    font-weight: bold;
+    text-align: right;
+}
+/* ---------- Photo Collage Layer ---------- */
+.collage-title {
+    font-size: 32px;
+    color: #c9184a;
+    margin-bottom: 20px;
+}
+
+.photo-collage {
+    display: grid;
+    grid-template-columns: repeat(3, 150px);
+    gap: 15px;
+    justify-content: center;
+}
+
+.photo-collage img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 18px;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+    transition: transform 0.4s;
+}
+
+.photo-collage img:hover {
+    transform: scale(1.1);
+}
+
+
+</style>
+</head>
+
+<body>
+
+<!-- Layer 1 -->
+<div class="layer layer1 active">
+    <div class="heart">💗</div>
+    <div class="title">Hi My Love</div>
+    <div class="subtitle">I made something for you... want to see?</div>
+    <button class="btn" onclick="nextLayer()">See My Surprise</button>
+</div>
+
+<!-- Layer 2 -->
+<div class="layer">
+    <h2>😜</h2>
+
+    <div class="funny-container">
+        <div class="funny-card">
+            <img src="C:\Users\1040695\Downloads\img2.jpeg">
+            <div class="funny-text">Koi Sharma raha hai !!!!!</div>
+        </div>
+
+        <div class="funny-card">
+            <img src="C:\Users\1040695\Downloads\img1.jpeg">
+            <div class="funny-text">Itna cute kaun hota hai bina bataye? 😤❤️</div>
+        </div>
+
+        <div class="funny-card">
+            <img src="C:\Users\1040695\Downloads\img3.jpeg">
+            <div class="funny-text">Serious look = 2 sec only 🤭</div>
+        </div>
+
+        <div class="funny-card">
+            <img src="C:\Users\1040695\Downloads\imgcute.jpeg">
+            <div class="funny-text">Mera favourite cartoon 😆💗</div>
+        </div>
+    </div>
+
+    <button class="btn" onclick="nextLayer()">Next</button>
+</div>
+
+<!-- Layer 3 : MESSAGE -->
+<div class="layer">
+    <div class="message-box" id="message"></div>
+    <button class="btn" onclick="nextLayer()">Next</button>
+</div>
+
+<!-- Layer 4 -->
+<!-- Layer 4 : PHOTO COLLAGE -->
+<div class="layer">
+    <div class="collage-title">Our Little Moments 📸❤️</div>
+
+    <div >
+        <img src="C:\Users\1040695\Downloads\OURIAMGE.jpeg" style="
+       width:50vw;
+       height:50vh;
+       object-fit:contain;
+       background:#fff;
+     ">
+        
+    </div>
+
+    <button class="btn" onclick="nextLayer()">Read My Letter 💌</button>
+</div>
+
+
+<!-- Layer 5 -->
+
+<div class="layer">
+    <div class="letter-container">
+        <div>My Love,</div>
+
+        <p>
+            My Love, Happy Birthday ❤️
+
+Happy Birthday to the man who unknowingly walked into my life through office corridors… and then never really walked out of my heart.
+<p>
+Who knew that an office meeting would turn into us?
+I still smile when I think about how you met me at office, how you used to meri taang kheechna all the time—acting all innocent but enjoying every reaction of mine 😌
+Sometimes I pretended to be annoyed, but honestly… I loved it. I still do.</p>
+<p>
+You’ve supported me in ways that go beyond words.
+Not just like a partner, but like a best friend, strength, and safe place.
+Whenever I needed love, motivation, or just someone to sit silently with me—you were there. Always.</p>
+<p>
+And then came that moment… our first trip together 🧳❤️
+Not just any trip, but India ke dusre kone tak.
+Thank you for putting in all that effort, planning, travelling, adjusting, and making memories with me. That trip wasn’t just about places—it was about us growing closer, trusting more, and falling deeper.</p>
+<p>
+You do so much without ever showing off about it.
+And today, I really want to say THANK YOU—for every effort, every compromise, every time you chose me.</p>
+<p>
+Also… how can I not mention your snoring 😴😂
+Sometimes it’s annoying, sometimes it’s funny, but somehow it has become one of those little things that feels… Habit.
+(Still not forgiving you for those sleepless nights though 😝)</p>
+<p>
+On your birthday, I just want you to know this:
+You are deeply loved.
+You are appreciated more than you realise.
+And you mean the world to me.</p>
+<p>
+May this year bring you happiness, success, peace, and all the dreams you deserve.
+And may I always be there—celebrating your wins, teasing you endlessly, travelling the world with you, and loving you a little more every day.</p>
+<p><b>I am proud Of You</p>
+<p> Happy Birthday Baby ❤️</p>
+        </p>
+
+        <div class="signature">
+            Forever yours ❤️
+        </div>
+    </div>
+</div>
+
+
+<script>
+let current = 0;
+const layers = document.querySelectorAll('.layer');
+
+function nextLayer() {
+    if (current < layers.length - 1) {
+        layers[current].classList.remove('active');
+        current++;
+        layers[current].classList.add('active');
+    }
+}
+
+/* Messages for Layer 3 */
+const messages = [
+    "Every moment with you feels like magic ✨",
+    "You make my bad days better and good days perfect 💕",
+    "I am so grateful to have you in my life 💖",
+    "This surprise is small, but my love for you is infinite ❤️"
+];
+
+let msgIndex = 0;
+const messageEl = document.getElementById("message");
+
+function showMessage() {
+    messageEl.innerHTML = messages[msgIndex];
+    msgIndex = (msgIndex + 1) % messages.length;
+}
+
+showMessage();
+setInterval(showMessage, 3000);
+</script>
+
+</body>
+</html>
